@@ -18,7 +18,7 @@ const createInterns = async (req, res) => {
                 //_________________________________________validation for empty field___________________________________//
 
 
-                if (!name) return res.status(400).send({ status: false, message: "Please enter your name" })
+                if (!name  || name.length == 0 ) return res.status(400).send({ status: false, message: "Please enter your name" })
 
                 //------------- validations only alphabet name and fullname -----------//
 
